@@ -1,6 +1,8 @@
 # Shiba & Adheeb — Wedding Invitation
 
-A single-page, mobile-first wedding invitation built with React + Vite.
+A elegant, single-page, mobile-first wedding invitation built with React + Vite.
+
+Live Website: [https://nidal-cmp.github.io/Shiba-x-Adheeb/](https://nidal-cmp.github.io/Shiba-x-Adheeb/)
 
 ## Run locally
 
@@ -9,32 +11,16 @@ npm install
 npm run dev
 ```
 
-Then open the printed local URL (usually http://localhost:5173).
+Then open the local URL (http://localhost:5173).
 
-## Add your photos and music
+## Features
 
-Drop these files in — the site already looks for them and falls back to a
-tasteful placeholder if any are missing:
-
-```
-public/images/bride.jpg
-public/images/groom.jpg
-public/images/couple.jpg
-public/images/venue.jpg
-public/music/wedding.mp3   (optional)
-```
-
-## Edit the wording
-
-All copy lives in `src/components/*.jsx` — each file is one section
-(Hero, Invitation, Couple, Countdown, WeddingDetails, Venue, Family,
-Closing, Footer). The countdown target date is set in
-`src/components/Countdown.jsx`.
-
-The "View Location" button in `Venue.jsx` currently opens a Google Maps
-*text search* for "Bianco Castle, Tirur" (no coordinates were invented).
-Once you have the exact map link or place ID, swap `MAPS_URL` in that
-file for it.
+- **No People Photographs**: Features gold typography, monogram seals (`S & A`), and floral vector embellishments.
+- **Opening Gate Overlay**: Interactive opening invitation.
+- **Countdown Timer**: Real-time countdown to 23rd December 2026.
+- **Venue & Map Integration**: Interactive location card for Bianco Castle, Tirur with Google Maps navigation.
+- **Background Music**: Background music player with responsive toggle control.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop viewports.
 
 ## Build for production
 
@@ -42,13 +28,9 @@ file for it.
 npm run build
 ```
 
-This outputs a static `dist/` folder.
+This generates the static `dist/` directory ready for deployment.
 
-## Deploy
+## GitHub Pages Deployment
 
-**Vercel** — import the repo at vercel.com/new, framework preset "Vite",
-no config needed.
+Automatically built and deployed via GitHub Actions workflow (`.github/workflows/deploy.yml`).
 
-**GitHub Pages** — set `base: '/your-repo-name/'` in `vite.config.js`,
-run `npm run build`, then deploy the `dist/` folder (e.g. with the
-`gh-pages` package or GitHub Actions).
